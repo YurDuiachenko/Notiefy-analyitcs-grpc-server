@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_package = "com.example.grpc";
+option java_outer_classname = "SongServiceProto";
+
+service ValidationService {
+  rpc ValidateAnalytics (SongCountList) returns (AnalyticsResponse);
+}
+
+message SongCount {
+  string name = 1;
+  int32 playsCount = 2;
+}
+
+message SongCountList {
+  repeated SongCount songCounts = 1;
+}
+
+message AnalyticsResponse {
+  bool success = 1;
+  string message = 2;
+}

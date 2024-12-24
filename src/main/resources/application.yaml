@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: Notiefy-toplist-server
+
+server:
+  port: 8084
